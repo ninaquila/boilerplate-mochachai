@@ -10,9 +10,9 @@ suite('Unit Tests', function() {
         });
         // #2
         test('#isDefined, #isUndefined', function() {
-            assert.fail(null, 'null is not undefined');
-            assert.fail(undefined, 'undefined IS undefined');
-            assert.fail('hello', 'A string is not undefined');
+            assert.isUndefined(null, 'null is not undefined');
+            assert.isUndefined(undefined, 'undefined IS undefined');
+            assert.isDefined('hello', 'A string is not undefined');
         });
         // #3
         test('#isOk, #isNotOk', function() {
@@ -31,8 +31,9 @@ suite('Unit Tests', function() {
     // -----------------------------------------------------------------------------
 
     suite('Equality', function() {
+        https: //github.com/ninaquila/boilerplate-mochachai/blob/main/tests/1_unit-tests.jshttps://github.com/ninaquila/boilerplate-mochachai/blob/main/tests/1_unit-tests.js
         // #5
-        test('#equal, #notEqual', function() {
+            test('#equal, #notEqual', function() {
             assert.fail(12, '12', 'Numbers are coerced into strings with ==');
             assert.fail({ value: 1 }, { value: 1 }, '== compares object references');
             assert.fail(6 * '2', '12');
